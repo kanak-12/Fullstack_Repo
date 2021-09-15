@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical-10</title>
+    <script src="https://use.fontawesome.com/221de87d0a.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;        
+        }
+        .header
+        {
+            width: 100%;
+            height: 70px;
+            background-color: #2f3640;
+            position: fixed;
+            top: 0;            
+            display: flex;
+            justify-content: center;
+        }
+        .header img
+        {
+            height: 70px;
+            width: 70px;
+            margin-right: 5px;
+        }
+        .header h2
+        {            
+            line-height: 70px;
+            text-align: center;
+            color: white;            
+        }
+        .side-bar
+        {
+            width: 20%;
+            height: 100vh;
+            background-color:#353b48 ;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            margin-top: 70px; 
+            transition: .7s;
+        }
+        ul
+        {
+            list-style: none;
+            margin: 0;padding: 0;
+        }
+        ul li
+        {
+            color: white;
+            border-bottom: 2px solid rgba(238, 111, 65, 0.822);
+        }
+        ul li a 
+        {
+            display: block;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 20px;
+        }    
+        ul li a:hover
+        {
+            border-left: 10px solid white;    
+        }  
+        a i {
+        font-size: 18px;
+        color: white;
+        margin-right: 20px;
+        }  
+        .show-btn, .hide-btn
+        {
+            position: fixed;
+            font-size: 30px;
+            color: white;
+            transition: .4s;
+            top: 20px;
+            left: 20px;            
+        }
+        .hide-btn
+        {
+            opacity: 0;
+        }
+        #chk
+        {
+            position: absolute;
+            visibility: hidden;  
+             z-index: -100;
+        }
+        
+            #chk:checked ~ .side-bar
+            {
+                left: 0;
+            }
+            #chk:checked ~ .show-btn
+            {
+                opacity: 0;
+            }
+            #chk:checked ~ .hide-btn
+            {
+                opacity: 1;
+            }
+            #chk:checked ~ .main-content
+            {
+                width: 80%;
+            }
+        .main-content
+        {
+            float: right;
+            width: 100%;
+            transition: .7s;
+            padding: 20px;
+        }
+        .main-content img
+        {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: auto;
+            margin-top: 50px;
+            
+        }
+        .main-content p
+        {
+            text-align: justify;
+        }
+        .social
+        {
+            margin-top: 180px;
+            display: flex;
+            justify-content: space-evenly;
+            border-top: 2px solid rgba(238, 111, 65, 0.822);
+            border-bottom: 2px solid rgba(238, 111, 65, 0.822);
+        }
+        .social i
+        {
+            padding: 10px 0;
+            font-size: 30px;
+            color: white;
+            float: left;
+        }
+
+        @media (max-width: 768px)
+        {
+            .side-bar{
+                width: 100%;
+                text-align: center;
+            }
+            .header h2{
+                display: none;
+            }
+        }
+    </style>
+   
+  <body>
+    <div class="header">
+        <img
+        src="../image/full 2.png"
+        alt=""
+      />
+        <h2>FULLSTACK</h2>
+    </div>
+        <input type="checkbox"  id="chk">
+        <label for="chk" class="show-btn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label for="chk" class="hide-btn">
+            <i class="fa fa-times" ></i>
+        </label>
+    <div class="side-bar">
+        <ul>
+            <li>
+              <a href="#"
+                ><i class="fa fa-home" aria-hidden="true"></i><span>Home</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-user" aria-hidden="true"></i><span>About</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-tasks" aria-hidden="true"></i
+                ><span>Services</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-rss" aria-hidden="true"></i><span>Blog</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-id-card" aria-hidden="true"></i
+                ><span>Contact</span></a
+              >
+            </li>
+          </ul>
+      <div class="social">          
+        <a href="#" target="_blank" "><i class="fa fa-facebook-square"></i></a>
+        <a href="#" target="_blank" "><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+        <a href="#" target="_blank" "><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="main-content">
+        <img src="../image/background.jpg" alt="">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            tenetur quod eos eligendi quidem repellendus necessitatibus,
+            distinctio numquam doloremque delectus qui cumque laborum, aliquam
+            natus at consectetur fuga, maxime mollitia libero! Neque itaque
+            magnam labore nobis expedita suscipit velit rerum veritatis fugiat
+            beatae nisi libero officia iusto rem deserunt, illum eum nemo odit
+            totam accusantium quia qui. Expedita ex amet, laborum, voluptas
+            dolore quas assumenda veniam pariatur, tempora beatae dolores vitae
+            magnam magni! Repudiandae harum quos consectetur omnis, porro optio
+            tempora nulla dicta libero ipsam quisquam non. Accusamus repellendus
+            mollitia architecto blanditiis ipsa suscipit officia aliquam
+            explicabo voluptate commodi fugit sunt repellat neque id doloribus
+            facilis unde eaque, at placeat maiores eligendi hic! Fugiat
+            officiis, perspiciatis harum maxime eveniet corrupti, qui nobis
+            beatae, consequuntur dignissimos illo! Quia dignissimos fugit
+            numquam iure corrupti? Doloremque, inventore nam quidem cumque atque
+            aliquam eius, iusto voluptatibus fuga maxime, quam culpa officia?
+            Alias, atque pariatur necessitatibus ratione amet beatae adipisci,
+            consequatur fugiat nesciunt praesentium, itaque temporibus molestias
+            recusandae placeat doloremque. Est nostrum consectetur praesentium
+            sunt consequatur pariatur. Iure, minima provident a expedita, non
+            praesentium harum laudantium amet ea esse corrupti facilis molestias
+            excepturi illum eum exercitationem repellendus cupiditate quos.
+            Aperiam, quia nobis! Repellendus necessitatibus nobis et quasi atque
+            rem exercitationem in dicta non esse voluptatibus, amet unde, cumque
+            delectus voluptate minima, corrupti ipsum laboriosam nihil ad
+            quibusdam! Deleniti fugit placeat nihil numquam, autem nemo
+            voluptate. Temporibus recusandae labore, repudiandae qui error iusto
+            doloribus placeat assumenda accusamus sit veritatis sunt. Nesciunt
+            voluptas inventore reprehenderit hic, aliquid iure quis eveniet
+            recusandae sint minus, rem est labore placeat assumenda cumque eius.
+            Reprehenderit, laboriosam! Nobis obcaecati, modi enim quasi atque
+            quos eveniet quis repellendus molestias maiores nemo amet dolorem
+            quibusdam tempore quaerat molestiae natus, deserunt blanditiis,
+            voluptatibus optio. Voluptatum numquam doloremque iste! Corporis,
+            eaque odit animi fugit ratione ea aliquid corrupti similique placeat
+            dignissimos! Ut sequi, ullam magnam placeat rerum est expedita. Sunt
+            enim dolore molestiae temporibus facere atque delectus alias porro
+            non impedit eaque quis quae laboriosam voluptatem distinctio odio,
+            praesentium laborum quod esse nemo, doloremque rem! Atque quisquam,
+            soluta hic possimus perspiciatis vel enim ratione, ullam cum
+            molestiae minus eligendi veniam placeat eos consequuntur est
+            recusandae iste doloremque at itaque sequi consectetur, aliquid iure
+            saepe. Itaque, sapiente numquam, esse est rerum sed aspernatur dolor
+            saepe corporis quis aperiam dolorum, repellat quibusdam dolore quas
+            nemo autem omnis! Vel deserunt labore nesciunt quidem, veniam iure
+            impedit? Culpa earum soluta, ipsa harum rem maxime minima voluptatem
+            commodi debitis, eligendi dolores fugiat dicta cumque suscipit?
+            Perspiciatis aliquid quam, mollitia cum, debitis, laudantium
+            voluptate nobis nulla dolorum neque autem pariatur necessitatibus
+            eligendi cumque nostrum? Animi fugiat eaque hic? Aliquid quaerat
+            repellendus repudiandae dignissimos debitis doloribus, laboriosam
+            nobis magnam omnis! Quia, explicabo? Debitis minus consequuntur
+            exercitationem est ipsam enim, beatae non? Repellat reiciendis
+            corrupti sapiente quasi fugiat illum? Obcaecati cupiditate aut
+            numquam tempore sit quo, quaerat molestias beatae at pariatur fugiat
+            voluptate minus ipsa quos modi architecto, nihil vero autem illum
+            tempora vel doloribus. Explicabo ab similique obcaecati vero at!
+            Nihil, architecto quisquam
+        </p>
+    </div>  
+  </body>
+</html>
