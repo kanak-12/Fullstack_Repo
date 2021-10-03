@@ -4,55 +4,214 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Practical-4</title>
+    <title>Index page</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      table {
+        text-align: left;
+       line-height: 20px;
+       border-collapse: separate;
+       border-spacing: 0;
+       border: 2px solid purple;
+       width: 80%;
+       margin: 20px auto;
+       border-radius: 5px;
+       background-color: white;
+      }
+      .heading {
+        text-align: center;
+      }
+      .heading h1 {
+        margin-bottom: 30px;
+        margin-top: 35px;
+        font-size: 50px;
+        font-style: italic;
+        color: tomato;
+      }
+      .heading h2 {
+        font-size: 30px;
+        font-style: italic;
+        color: teal;
+      }
+      thead tr:first-child {
+      background: lightpink;
+      color: black;
+      border: none;
+      line-height: 40px;
+      text-align: center;
+      }
+      thead tr th:nth-child(3){
+        padding-left: 160px;
+        line-height: 40px;
+        text-align: center;
+      }
+      th:first-child,td:first-child{
+        padding: 0 25px 0 20px;
+      }
+      th {
+        font-weight: bold;
+      }
+      thead tr:last-child th {
+        border-bottom: 3px solid gray;
+
+      }
+      tbody tr:hover{
+        background-color: lightgray;
+        cursor:default;
+      } 
+      tbody tr td:nth-child(1){
+        width: 50px;
+
+      }
+      tbody tr td:nth-child(2){
+        width: 500px;
+        padding-right: 10px;
+      }
+      tbody tr td:nth-child(3){
+        padding-left: 160px;
+      }
+      tbody td{
+        border-bottom: 1px solid lightsteelblue;
+        height: 50px;
+      }
+      td:last-child{
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color: grey;
+      }
+      a:hover{
+        color: salmon;
+      }
+  </style>
   </head>
-  <body style="background-color:#00FF7F;">
-    <h3 style="color: red">
-      Practical-4: Create a website having list of all practical and their
-      individual practical Page links.
-    </h3>
-    <h2>Output</h2>
-    <h1 style="color: darkmagenta;">
-    List of Practicals
-  </h1>
-  <p>
-    1. Create a Web page including HTML basic skeleton using Offline HTML
-    Editor and Online codepen environment
-   <a href="./page/practical 1.html">Practical-1</a>
-  </p>
-  2. Create a web page showing a basic html structure using character
-  Entities and span Tag.
-  <a href="./page/practical 2.html">Practical-2</a>
-</p>
-  <p>
-    3. Live your First Web-Page on Git-Hub.
-    <a href="./page/practical 3.html">Practical-3</a>
-  </p>
-  <p>
-    4. Create a website having list of all practical and their individual
-    practical Page links
-    <a href="#">Practical-4</a>
-  </p>
-  <p> 5. Create a Web-Page showing the use of Image-Map in the Web Application
-    <a href="./page/practical 5.html">Practical-5</a>
-  </p>
-  <p> 6. Create a Card Layout using CSS layout properties.
-    <a href="./page/practical 6.html">Practical-6</a>
-  </p>
-  <p> 7. Create a Web Page Layout using div tags.
-  <a href="./page/practical 7.html">Prcactical-7</a>
-</p>
-<p> 8. Create a Web Page having Fixed Navigation Bar with the given content.
-  <a href="./page/practical 8.html">Practical-8</a>
-</p>
-<p> 9. Create a Responsive Web Layout with Responsive Navigation Bar.
-  <a href="./page/practical 9.html">Practical-9</a>
-</p>
-<p> 10. Create a Responsive Side-Bar Navigation Menu.
-  <a href="./page/practical 10.html">Practical-10</a>
-</p>
-<p>11. Create a Responsive footer template.
-  <a href="./page/practical 11.html">Practical-11</a>
-</p>
+  <body>
+    <div class="heading">
+      <h1>Welcome to Fullstack Course</h1>
+      <h2>Live practicals of Fullstack</h2>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="3">Fullstack Practical Book</th>
+        </tr>
+        <tr>
+          <th>#</th>
+          <th>Practical name</th>
+          <th>links</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>
+            Create a Web page including HTML basic skeleton using Offline HTML
+            Editor and Online codepen environment
+          </td>
+          <td class="jbl">
+            <a href="./page/practical 1.html">Practical-1</a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>
+            Create a web page showing a basic html structure using character
+            Entities and span Tag.
+          </td>
+          <td class="jbl">
+            <a href="./page/practical 2.html">Practical-2</a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Live your First Web-Page on Git-Hub.</td>
+          <td class="jbl">
+            <a href="./page/practical 3.html">Practical-3</a>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>
+            Create a website having list of all practical and their individual
+            practical Page links
+          </td>
+          <td class="jbl">
+            <a href="#">Practical-4</a>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>
+            Create a Web-Page showing the use of Image-Map in the Web
+            Application/td>
+          </td>
+          <td class="jbl">
+            <a href="./page/practical 5 html.html">Practical-5</a>
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Create a Card Layout using CSS layout properties./td></td>
+          <td class="jbl">
+            <a href="./page/Practical 6.html">Practical-6</a>
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Create a Web Page Layout using div tags.</td>
+          <td class="jbl">
+            <a href="./page/Practical 7.html">Practical-7</a>
+          </td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>
+            Create a Web Page having Fixed Navigation Bar with the given
+            content.
+          </td>
+          <td class="jbl">
+            <a href="./page/Practical 8.html">Practical-8</a>
+          </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>
+            Create a Responsive Web Layout with Responsive Navigation Bar.
+          </td>
+          <td class="jbl">
+            <a href="./page/Practical 9.html">Practical-9</a>
+          </td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Create a Responsive Side-Bar Navigation Menu.</td>
+          <td class="jbl">
+            <a href="./page/Practical 10.html">Practical-10</a>
+          </td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Create a Responsive footer template.</td>
+          <td class="jbl">
+            <a href="./page/Practical 11.html">Practical-11</a>
+          </td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Create a table that represents live practical book records.</td>
+          <td class="jbl">
+            <a href="./page/Practical 12">Practical-12</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
