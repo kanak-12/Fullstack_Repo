@@ -1,0 +1,10 @@
+
+.main ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
+.green{
+    color: chartreuse;
+}
+

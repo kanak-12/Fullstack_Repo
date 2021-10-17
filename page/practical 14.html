@@ -1,0 +1,74 @@
+l<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Practical 14</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(218, 209, 209);
+        }
+        .container {
+            text-align: center;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .buttonContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #value {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        button {
+            margin-top: 10px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-color: greenyellow;
+            outline: none;
+            font-size: 20px;
+            margin: 0 10px;
+            /* color: white; */
+        }
+    </style>
+    <body>
+        <div class="container">
+            <h1 class="main-heading">COUNTER</h1>
+            <div class="buttonContainer">
+                <button class="minus" id="dec" onclick="decrement()">-</button>
+                <h1 id="value">0</h1>
+                <button class="plus" id="inc" onclick="increment()">+</button>
+            </div>
+        </div>
+        <script>
+            //   var i = 0;
+            var counterValue = parseInt(
+                document.getElementById("value").innerHTML
+            );
+            var btn = document.getElementById("dec");
+            btn.disabled = true;
+            function decrement() {
+                counterValue = counterValue - 1;
+                document.getElementById("value").innerHTML = counterValue;
+                if (counterValue == 0) {
+                    btn.disabled = true;
+                }
+            }
+            function increment() {
+                counterValue = counterValue + 1;
+                document.getElementById("value").innerHTML = counterValue;
+                btn.disabled = false;
+            }
+        </script>
+    </body>
+</html>
