@@ -1,10 +1,44 @@
 
-.main ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 20px;
+body {
+    background: #fff;
+    font-family: "Open Sans", sans-serif;
 }
-.green{
-    color: chartreuse;
+nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    top: 0;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    justify-content: space-around;
+    align-items: center;
 }
+.navb img{
+    width: 220px;
+    cursor: pointer;
+}
+ul {
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+     list-style: none;
+     margin: 5px 10px;
+}
+nav ul li a{
+    padding: 4px 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    background: linear-gradient(to right,#a83279,#ffbb3b);
+    border-radius: 10px;
+    color: #fff;
 
+}
+nav {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #0005;
+}
